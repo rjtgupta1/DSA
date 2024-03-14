@@ -27,15 +27,41 @@ int Selection_Sort(int Array[]){
     }
 }
 
+int Bubble_Sort(int Array[]){
+    int ptr;
+    for (int i = 0; i < 10; i++)
+    {
+        ptr = 0;
+        while (ptr<10-i)
+        {
+            if(Array[ptr]>Array[ptr+1])
+            {
+                Swap(Array,ptr,ptr+1);
+            }
+            ptr++;
+        }
+    }  
+    // printing the sorted Array
+    for(int k=0;k<10;k++){
+        printf("%d ",Array[k]);
+    }
+}
+
 int main() {
     int arr[] = {1,5,7,9,2,6,11,4,3,8};
     printf("Before Sorting the array\n");
     for(int i=0;i<10;i++){
         printf("%d ",arr[i]);
     }
+    printf("\n");
     
-    printf("\n\nSelection Sort\n");
+    printf("\nSelection Sort\n");
     Selection_Sort(arr);
     printf("\n");
+
+    printf("\nBubble Sort\n");
+    Bubble_Sort(arr);
+    printf("\n");
+
     return 0;
 }
