@@ -274,5 +274,21 @@ class Pattern {
             }
             System.out.println();
         }
+        System.out.println();
+
+        // Print a hollow Rhombus.
+
+        n = 5;
+        m = 9;
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<9-i;j++){
+                if((j>n-i-1 && i==0) || (j==n-i-1 || j==m-i-1 || i==n-1))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 }
