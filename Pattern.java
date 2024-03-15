@@ -217,6 +217,38 @@ class Pattern {
         }
         System.out.println();
 
+        // Diamond Pattern
+        n = 4;
+
+        // upper part
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(j>=n-i-1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            for(int j=0;j<i;j++){
+                if(j<=i)
+                    System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // lower part
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(j>=i)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            for(int j=0;j<n-i-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
     }
 }
