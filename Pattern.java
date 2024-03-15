@@ -149,7 +149,7 @@ class Pattern {
         }
         System.out.println();
 
-        // Home work problem 1
+        // Home work problem 1 (Rhombus)
         int nn = 5;
         int mm = 10;
 
@@ -250,5 +250,29 @@ class Pattern {
         }
         System.out.println();
 
+        // Print a hollow Butterfly
+
+        n = 5;
+        m = 10;
+        // upper part
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(j==i || j==m-1 || j==0 || j==m-i-1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+        // lower part
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(j==m-1 || j==0 || j==n-i-1 || j==n+i)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 }
