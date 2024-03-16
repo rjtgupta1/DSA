@@ -290,5 +290,26 @@ class Pattern {
             }
             System.out.println();
         }
+        System.out.println();
+
+        // Print Pascal’s Triangle
+        n = 5;
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(j>=n-i-1){
+                    if(j==n-i-1 || j==n-1)
+                        System.out.print(1+" ");
+                    else if(i==n-1 && j==n/2)
+                        System.out.print(i+2+" ");
+                    else
+                        System.out.print(i+" ");
+                }
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+
     }
 }
