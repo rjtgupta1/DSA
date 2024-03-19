@@ -311,5 +311,7 @@ class Pattern {
             System.out.println();
         }
 
+        // the above Pascal's triangle problem is wrong
+
     }
 }
