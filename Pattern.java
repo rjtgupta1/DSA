@@ -343,5 +343,8 @@ class Pattern {
             }
             System.out.println();
         }
+
+        System.out.println();
+
     }
 }
