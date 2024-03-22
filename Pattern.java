@@ -125,7 +125,7 @@ class Pattern {
         }
         System.out.println();
 
-        // 8. Floyed's Trangle
+        // 8. Floyed's Triangle
 
         int number = 1;
         for(int i = 0;i<n;i++){
@@ -310,8 +310,38 @@ class Pattern {
             }
             System.out.println();
         }
+        
+        System.out.println();
+        // the above Pascal's triangle solution is wrong
 
-        // the above Pascal's triangle problem is wrong
+        n = 5;
+        int x = n;
+        int y = n;
 
+        int arr[][] = new int[x][y];
+
+        // Assigning the value to array
+        for(int i=0;i<x;i++){
+            for(int j=0;j<y;j++){
+                if(j>=n-i-1){
+                    if(j==n-i-1 || j==n-1)
+                        arr[i][j] = 1;
+                    else
+                        arr[i][j] = arr[i-1][j]+arr[i-1][j+1];
+                }
+            }
+        }
+
+        // printing the value of array
+
+        for(int i=0;i<x;i++){
+            for(int j=0;j<y;j++){
+                if(arr[i][j]==0)
+                    System.out.print(" ");
+                else
+                    System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
